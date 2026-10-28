@@ -150,6 +150,409 @@ body:not(.admin-body) .hero {
     background: #123f43;
 }
 
+body:not(.admin-body) .breakdance-hero {
+    position: relative;
+    display: flex;
+    min-height: 620px;
+    align-items: center;
+    overflow: hidden;
+    background: #102d38;
+}
+
+.breakdance-hero-image,
+.breakdance-hero-shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.breakdance-hero-image {
+    object-fit: cover;
+    object-position: center 45%;
+}
+
+.breakdance-hero-shade {
+    background: linear-gradient(90deg, rgba(7, 24, 34, .86), rgba(7, 24, 34, .55) 54%, rgba(7, 24, 34, .18));
+}
+
+.breakdance-hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 145px;
+    padding-bottom: 60px;
+    color: #fff;
+}
+
+.breakdance-back-link {
+    display: inline-block;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, .84);
+    font-size: 13px;
+}
+
+.breakdance-back-link:hover {
+    color: #8fe4df;
+}
+
+body:not(.admin-body) .breakdance-hero .eyebrow {
+    color: #8fe4df;
+}
+
+.breakdance-hero h1 {
+    max-width: 760px;
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 700;
+    letter-spacing: -.045em;
+    line-height: 1.08;
+    text-wrap: balance;
+}
+
+.breakdance-hero-content > p:not(.eyebrow) {
+    max-width: 640px;
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, .86);
+    font-size: clamp(16px, 1.8vw, 19px);
+    line-height: 1.65;
+}
+
+.breakdance-description {
+    background: #fff;
+}
+
+.breakdance-content-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .82fr);
+    gap: clamp(38px, 7vw, 90px);
+}
+
+.breakdance-copy h2,
+.breakdance-offers h2 {
+    margin: 0 0 22px;
+    color: #163f43;
+    font-size: clamp(30px, 4vw, 44px);
+    letter-spacing: -.04em;
+    line-height: 1.15;
+}
+
+.breakdance-copy h2 span,
+.breakdance-offers h2 span {
+    color: #07868a;
+}
+
+.breakdance-copy > p:not(.eyebrow) {
+    color: #536669;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.breakdance-feature-image {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #eff3f2;
+    box-shadow: 0 18px 45px rgba(13, 36, 41, .14);
+}
+
+.breakdance-feature-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.24;
+    object-fit: cover;
+}
+
+.breakdance-feature-image figcaption {
+    padding: 12px 15px;
+    color: #617173;
+    font-size: 12px;
+}
+
+.breakdance-offers {
+    background: #f3f6f5;
+}
+
+.breakdance-offers-heading {
+    max-width: 680px;
+    margin-bottom: 35px;
+}
+
+.breakdance-offer-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.breakdance-offer-list li {
+    display: flex;
+    gap: 14px;
+    padding: 22px;
+    border: 1px solid #e1e9e7;
+    background: #fff;
+}
+
+.breakdance-offer-list li > span {
+    color: #07868a;
+    font-size: 17px;
+}
+
+.breakdance-offer-list strong {
+    color: #1d4245;
+    font-size: 16px;
+}
+
+.breakdance-offer-list p {
+    margin: 6px 0 0;
+    color: #617173;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.breakdance-contact-copy {
+    margin: 24px 0 18px;
+    color: #536669;
+    font-size: 15px;
+}
+
+body:not(.admin-body) .contact-hero {
+    position: relative;
+    display: flex;
+    min-height: 390px;
+    align-items: center;
+    overflow: hidden;
+    padding: 175px 0 65px;
+    background: #123f43;
+    color: #fff;
+}
+
+.contact-hero-image,
+.contact-hero-shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-hero-image {
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+.contact-hero-shade {
+    background: linear-gradient(90deg, rgba(7, 24, 34, .86), rgba(7, 24, 34, .58) 58%, rgba(7, 24, 34, .3));
+}
+
+.contact-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+}
+
+body:not(.admin-body) .contact-hero .eyebrow {
+    color: #8fe4df;
+}
+
+.contact-hero h1 {
+    margin: 0 0 16px;
+    color: #fff;
+    font-size: clamp(38px, 5vw, 58px);
+    letter-spacing: -.045em;
+    line-height: 1.1;
+}
+
+.contact-hero-inner > p:last-child {
+    max-width: 650px;
+    margin: 0;
+    color: rgba(255, 255, 255, .82);
+    font-size: 17px;
+}
+
+.contact-main {
+    background: #f5f7f6;
+}
+
+.contact-layout {
+    display: grid;
+    align-items: start;
+    grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr);
+    gap: clamp(30px, 6vw, 78px);
+}
+
+.contact-details h2,
+.contact-form-panel h2 {
+    margin: 0 0 12px;
+    color: #163f43;
+    font-size: clamp(25px, 3vw, 34px);
+    letter-spacing: -.035em;
+    line-height: 1.2;
+}
+
+.contact-details > p:not(.eyebrow),
+.contact-form-intro {
+    color: #617173;
+    font-size: 14px;
+}
+
+.contact-phone-list {
+    display: grid;
+    gap: 12px;
+    margin: 28px 0;
+}
+
+.contact-phone-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid #e1e9e7;
+    background: #fff;
+    color: #1d4245;
+}
+
+.contact-phone-card:hover {
+    border-color: #9cc9c8;
+}
+
+.contact-phone-icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    place-items: center;
+    border-radius: 50%;
+    background: #e7f4f2;
+    color: #087f83;
+}
+
+.contact-phone-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.contact-phone-card > span:last-child {
+    display: grid;
+    gap: 2px;
+}
+
+.contact-phone-card small {
+    color: #6a7a7b;
+    font-size: 11px;
+}
+
+.contact-phone-card strong {
+    font-size: 16px;
+}
+
+.contact-service-area {
+    color: #617173;
+    font-size: 13px;
+}
+
+.contact-form-panel {
+    padding: clamp(22px, 4vw, 38px);
+    border: 1px solid #e3e9e7;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(13, 36, 41, .06);
+}
+
+.contact-form-intro {
+    margin: 0 0 22px;
+}
+
+.contact-form .form-message {
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    border: 1px solid;
+    font-size: 13px;
+}
+
+.contact-form .form-error {
+    border-color: #dfb4b4;
+    background: #fff5f5;
+    color: #8c3232;
+}
+
+.contact-form .form-success {
+    border-color: #9dcbb0;
+    background: #f0faf3;
+    color: #27623c;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.contact-field {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+}
+
+.contact-field--full {
+    grid-column: 1 / -1;
+}
+
+.contact-field label {
+    color: #344c4e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 12px;
+    border: 1px solid #d6dfdd;
+    border-radius: 3px;
+    background: #fff;
+    color: #263b3d;
+    font: inherit;
+    font-size: 14px;
+}
+
+.contact-field textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-color: #07868a;
+    outline: 2px solid rgba(7, 134, 138, .16);
+}
+
+.contact-honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+body:not(.admin-body) .contact-form > .button {
+    border: 1px solid #07868a;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+}
+
 body:not(.admin-body) .hero-grid {
     position: static;
     display: block;
@@ -414,12 +817,8 @@ body:not(.admin-body) .service-card::before {
 }
 
 body:not(.admin-body) .service-card--dance::before {
-    background-image:
-        radial-gradient(ellipse at 18% 18%, rgba(255, 211, 134, .72), transparent 3%),
-        radial-gradient(ellipse at 79% 23%, rgba(255, 237, 199, .58), transparent 4%),
-        linear-gradient(112deg, transparent 26%, rgba(255, 201, 126, .18) 27%, transparent 47%),
-        linear-gradient(68deg, transparent 52%, rgba(255, 233, 178, .16) 53%, transparent 72%),
-        radial-gradient(ellipse at 50% 88%, #9b563c 0, #392d3e 40%, #142d3b 80%);
+    background-image: url('/assets/images/breakdance-show-1.jpg');
+    background-position: center 45%;
 }
 
 body:not(.admin-body) .service-card--mc::before {
@@ -436,11 +835,8 @@ body:not(.admin-body) .service-card--dj::before {
 }
 
 body:not(.admin-body) .service-card--kids::before {
-    background-image:
-        radial-gradient(circle at 20% 24%, rgba(255, 215, 121, .82) 0 7%, transparent 7.5%),
-        radial-gradient(circle at 78% 24%, rgba(255, 142, 149, .8) 0 9%, transparent 9.5%),
-        radial-gradient(circle at 60% 48%, rgba(120, 214, 203, .64) 0 8%, transparent 8.5%),
-        radial-gradient(ellipse at 48% 100%, #bb765c, #744f67 53%, #203b50);
+    background-image: url('/assets/images/kids-party.webp');
+    background-position: center 54%;
 }
 
 body:not(.admin-body) .service-card::after {
@@ -724,14 +1120,15 @@ body:not(.admin-body) .footer-bottom {
 
     .site-contact-items {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 8px;
     }
 
     .site-contact-items a,
     .site-contact-placeholder {
         gap: 5px;
-        font-size: 8px;
+        font-size: 9px;
     }
 
     .header-inner {
@@ -779,6 +1176,50 @@ body:not(.admin-body) .footer-bottom {
     body:not(.admin-body) .hero {
         min-height: 490px;
         padding: 145px 0 30px;
+    }
+
+    body:not(.admin-body) .breakdance-hero {
+        min-height: 560px;
+    }
+
+    .breakdance-hero-content {
+        padding-top: 125px;
+        padding-bottom: 48px;
+    }
+
+    .breakdance-back-link {
+        margin-bottom: 37px;
+    }
+
+    .breakdance-hero h1 {
+        font-size: clamp(38px, 10.5vw, 54px);
+    }
+
+    .breakdance-content-grid,
+    .breakdance-offer-list {
+        grid-template-columns: 1fr;
+    }
+
+    .breakdance-content-grid {
+        gap: 28px;
+    }
+
+    .breakdance-offer-list li {
+        padding: 18px;
+    }
+
+    body:not(.admin-body) .contact-hero {
+        min-height: 350px;
+        padding: 140px 0 48px;
+    }
+
+    .contact-layout,
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-field--full {
+        grid-column: auto;
     }
 
     body:not(.admin-body) .hero h1 {

@@ -22,4 +22,15 @@ final class ContactRequest
 
         return $statement->fetchAll();
     }
+
+    public function create(array $request): void
+    {
+        $statement = $this->db->prepare(
+            'INSERT INTO contact_requests
+                (name, phone, email, event_type, desired_service, event_date, locality, message)
+             VALUES
+                (:name, :phone, :email, :event_type, :desired_service, :event_date, :locality, :message)'
+        );
+        $statement->execute($request);
+    }
 }

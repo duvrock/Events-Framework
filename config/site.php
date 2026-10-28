@@ -10,7 +10,8 @@ return [
         'url' => '',
     ],
     'contact' => [
-        'phone' => '',
+        'phone' => '+40761657045',
+        'phone_secondary' => '+40731251289',
         'email' => '',
         'whatsapp' => '',
     ],

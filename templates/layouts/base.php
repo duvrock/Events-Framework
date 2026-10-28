@@ -15,6 +15,9 @@ $colors = $site['colors'];
     <meta name="description" content="<?= e($description) ?>">
     <meta name="theme-color" content="<?= e($colors['background']) ?>">
     <title><?= e($title) ?> | <?= e($site['brand']['name']) ?></title>
+    <?php if (isset($data['structuredData'])): ?>
+        <script type="application/ld+json"><?= json_encode($data['structuredData'], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_THROW_ON_ERROR) ?></script>
+    <?php endif; ?>
     <?php if ($canonical !== ''): ?>
         <link rel="canonical" href="<?= e($canonical) ?>">
     <?php endif; ?>

@@ -42,6 +42,8 @@ Nu trimite și nu salva credențiale reale în repository. Pentru hosting, folos
 ## Rute disponibile în această etapă
 
 - `/` — pagina principală
+- `/contact/` — pagina și formularul de contact
+- `/show-uri-dans-nunti-evenimente-craiova/` — pagina show-urilor de breakdance
 - `/admin/login/` — autentificare administrator
 - `/admin/` — pagini și solicitări recente
 - `/admin/pages/{slug}/` — editarea conținutului unei pagini
@@ -49,7 +51,7 @@ Nu trimite și nu salva credențiale reale în repository. Pentru hosting, folos
 
 Linkurile sociale sunt salvate în tabelul `social_links` și afișate ca iconițe verticale în partea dreaptă jos a bannerului principal, doar când au fost configurate. Rulează `php bin\migrate.php` pentru a crea tabelul pe o instalare existentă.
 
-Formularul public de contact și paginile individuale de servicii se implementează în etapele următoare. Tabelul `contact_requests` este pregătit, iar datele trimise vor fi vizibile numai în zona administrată.
+Solicitările trimise prin formularul de contact sunt stocate în `contact_requests` și apar în zona administrată. Numerele de telefon se configurează în `config/site.php`.
 
 ## Teste locale
 

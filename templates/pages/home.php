@@ -75,8 +75,8 @@
         $services = [
             [
                 'number' => '01',
-                'title' => 'Show-uri de dans',
-                'text' => 'Show-uri de dans pentru nunți și evenimente, adaptate momentului și atmosferei dorite.',
+                'title' => 'Show-uri de breakdance',
+                'text' => 'Momente spectaculoase de breakdance pentru nunți și evenimente.',
                 'url' => '/show-uri-dans-nunti-evenimente-craiova/',
                 'icon' => '✳',
             ],

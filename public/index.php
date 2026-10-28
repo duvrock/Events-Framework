@@ -25,6 +25,16 @@ try {
         return;
     }
 
+    if ($path === '/contact/') {
+        App\Controllers\HomeController::contact($site, $method);
+        return;
+    }
+
+    if ($path === '/show-uri-dans-nunti-evenimente-craiova/') {
+        App\Controllers\HomeController::breakdance($site);
+        return;
+    }
+
     if ($path === '/admin/') {
         App\Controllers\AdminController::dashboard();
         return;

@@ -7,6 +7,12 @@
                         <span class="contact-icon" aria-hidden="true">⌕</span>
                         <span><?= e($site['contact']['phone']) ?></span>
                     </a>
+                    <?php if (($site['contact']['phone_secondary'] ?? '') !== ''): ?>
+                        <a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $site['contact']['phone_secondary'])) ?>">
+                            <span class="contact-icon" aria-hidden="true">⌕</span>
+                            <span><?= e($site['contact']['phone_secondary']) ?></span>
+                        </a>
+                    <?php endif; ?>
                 <?php else: ?>
                     <span class="site-contact-placeholder"><span class="contact-icon" aria-hidden="true">⌕</span> Telefon în curs de configurare</span>
                 <?php endif; ?>

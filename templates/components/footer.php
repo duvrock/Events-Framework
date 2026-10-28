@@ -23,6 +23,9 @@
             <?php if ($site['contact']['phone'] !== ''): ?>
                 <a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $site['contact']['phone'])) ?>"><?= e($site['contact']['phone']) ?></a>
             <?php endif; ?>
+            <?php if (($site['contact']['phone_secondary'] ?? '') !== ''): ?>
+                <a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $site['contact']['phone_secondary'])) ?>"><?= e($site['contact']['phone_secondary']) ?></a>
+            <?php endif; ?>
             <?php if ($site['contact']['email'] !== ''): ?>
                 <a href="mailto:<?= e($site['contact']['email']) ?>"><?= e($site['contact']['email']) ?></a>
             <?php endif; ?>
