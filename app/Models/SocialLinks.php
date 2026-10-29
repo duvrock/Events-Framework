@@ -11,9 +11,6 @@ final class SocialLinks
     public const PLATFORMS = [
         'facebook' => 'Facebook',
         'instagram' => 'Instagram',
-        'twitter' => 'X / Twitter',
-        'pinterest' => 'Pinterest',
-        'linkedin' => 'LinkedIn',
     ];
 
     public function __construct(private readonly PDO $db)

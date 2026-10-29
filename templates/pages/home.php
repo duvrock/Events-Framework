@@ -34,9 +34,6 @@
     $socialIconLabels = [
         'facebook' => 'Facebook',
         'instagram' => 'Instagram',
-        'twitter' => 'X / Twitter',
-        'pinterest' => 'Pinterest',
-        'linkedin' => 'LinkedIn',
     ];
     $activeSocialPlatforms = array_filter(
         $socialIconLabels,
@@ -51,7 +48,7 @@
                     <?php if ($platform === 'instagram'): ?>
                         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-icon-dot" cx="17.5" cy="6.8" r="1"/></svg>
                     <?php else: ?>
-                        <span aria-hidden="true"><?= $platform === 'facebook' ? 'f' : ($platform === 'twitter' ? '𝕏' : ($platform === 'pinterest' ? 'p' : 'in')) ?></span>
+                        <span aria-hidden="true">f</span>
                     <?php endif; ?>
                 </a>
             <?php endforeach; ?>
@@ -65,7 +62,7 @@
         <div class="section-heading">
             <div>
                 <p class="eyebrow"><span class="eyebrow-line"></span> Serviciile noastre</p>
-                <h2>Tot ce aduce evenimentul <span>la viață.</span></h2>
+                <h2>Show-uri și DJ pentru evenimente <span>în Craiova.</span></h2>
             </div>
             <p>Descoperă opțiunile de entertainment și alege ce se potrivește evenimentului tău.</p>
         </div>
@@ -75,7 +72,7 @@
         $services = [
             [
                 'number' => '01',
-                'title' => 'Show-uri de breakdance',
+                'title' => 'Show-uri pentru evenimente',
                 'text' => 'Momente spectaculoase de breakdance pentru nunți și evenimente.',
                 'url' => '/show-uri-dans-nunti-evenimente-craiova/',
                 'icon' => '✳',
@@ -89,8 +86,8 @@
             ],
             [
                 'number' => '03',
-                'title' => 'DJ pentru evenimente',
-                'text' => 'Muzică pentru nunți, petreceri private și alte ocazii speciale.',
+                'title' => 'DJ Craiova',
+                'text' => 'DJ pentru nunți, petreceri private și evenimente în Craiova.',
                 'url' => '/dj-evenimente-craiova/',
                 'icon' => '♫',
             ],
@@ -104,6 +101,7 @@
         ];
         foreach ($services as $service):
             $isDjService = $service['number'] === '03';
+            $isMcService = $service['number'] === '02';
         ?>
             <article class="service-card service-card--<?= e(match ($service['number']) {
                 '01' => 'dance',
@@ -111,8 +109,15 @@
                 '03' => 'dj',
                 default => 'kids',
             }) ?>" data-card-effect>
-                <span class="service-number"><?= e($service['number']) ?></span>
-            <span class="service-demo-label"><?= $isDjService ? 'Fotografie furnizată' : 'Fundal demonstrativ · înlocuibil' ?></span>
+            <span class="service-demo-label">
+                <?php if ($isDjService): ?>
+                    Fotografie furnizată
+                <?php elseif ($isMcService): ?>
+                    <a href="https://commons.wikimedia.org/wiki/File:Festival_of_Embassies_Prague_2022_C.jpg" target="_blank" rel="noopener noreferrer">Foto: Mojmir Churavy · CC0</a>
+                <?php else: ?>
+                    Fundal demonstrativ · înlocuibil
+                <?php endif; ?>
+            </span>
                 <div class="service-card-content">
                     <span class="service-icon" aria-hidden="true"><?= e($service['icon']) ?></span>
                     <h3><?= e($service['title']) ?></h3>

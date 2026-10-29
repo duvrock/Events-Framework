@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS social_links (
 
 INSERT IGNORE INTO pages (slug, title, meta_description, h1, intro)
 VALUES
-    ('home', 'Entertainment pentru nunți și evenimente în Craiova', 'Descoperă servicii de DJ, MC, show-uri de dans și entertainment pentru copii la nunți și evenimente în Craiova și împrejurimi.', 'Entertainment pentru nunți și evenimente în Craiova', 'DJ, MC, show-uri de dans și petreceri pentru copii în Craiova și împrejurimi.'),
+    ('home', 'Show-uri pentru evenimente și DJ în Craiova', 'Show-uri pentru evenimente și DJ în Craiova: momente de dans, DJ și entertainment pentru nunți, botezuri și petreceri. Cere o ofertă ShowTime.', 'Show-uri și DJ pentru evenimente în Craiova', 'Organizezi o nuntă, un botez sau o petrecere? Alege show-uri de dans și DJ în Craiova pentru momente memorabile și o atmosferă potrivită evenimentului tău.'),
     ('show-uri-dans-nunti-evenimente-craiova', 'Show-uri de dans pentru nunți în Craiova', 'Show-uri de dans pentru nunți și evenimente în Craiova și împrejurimi.', 'Show-uri de dans pentru nunți și evenimente', 'Descoperă opțiunile de show de dans pentru evenimentul tău.'),
     ('mc-evenimente-craiova', 'MC pentru evenimente în Craiova', 'Servicii de MC pentru nunți, botezuri și evenimente private în Craiova.', 'MC pentru nunți și evenimente', 'Discutăm despre prezentarea momentelor și coordonarea programului evenimentului.'),
     ('dj-evenimente-craiova', 'DJ pentru evenimente în Craiova', 'Servicii DJ pentru nunți și evenimente în Craiova și împrejurimi.', 'DJ pentru nunți și evenimente', 'Spune-ne ce eveniment organizezi și ce muzică îți dorești.'),

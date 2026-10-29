@@ -12,8 +12,19 @@ use RuntimeException;
 
 final class HomeController
 {
+    private static function siteWithSocialLinks(array $site): array
+    {
+        $site['social'] = array_merge(
+            $site['social'],
+            (new SocialLinks(Database::connection()))->all()
+        );
+
+        return $site;
+    }
+
     public static function contact(array $site, string $method): void
     {
+        $site = self::siteWithSocialLinks($site);
         $fields = [
             'name' => '',
             'phone' => '',
@@ -78,6 +89,7 @@ final class HomeController
 
     public static function breakdance(array $site): void
     {
+        $site = self::siteWithSocialLinks($site);
         $description = 'Show nunți Craiova și momente artistice de breakdance pentru nuntă, botez, majorat și evenimente corporate. Cere o ofertă personalizată pentru evenimentul tău.';
 
         render_page('breakdance', [
@@ -116,10 +128,7 @@ final class HomeController
             $canonical = rtrim($canonical, '/') . '/';
         }
 
-        $site['social'] = array_merge(
-            $site['social'],
-            (new SocialLinks(Database::connection()))->all()
-        );
+        $site = self::siteWithSocialLinks($site);
 
         render_page('home', [
             'title' => $page['title'],

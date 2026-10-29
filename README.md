@@ -14,6 +14,10 @@ Aplicație PHP cu arhitectură MVC simplă și MySQL. Directorul `public/` trebu
 
 Bannerul principal folosește un clip de 720p de Bryan Santos, găzduit local în `public/assets/video/wedding-dance.mp4`, cu posterul `public/assets/images/wedding-dance-poster.jpg`. Sursa clipului: [Pexels](https://www.pexels.com/video/people-dancing-at-a-wedding-party-20155165/). Clipul pornește fără sunet; nu este încărcat când browserul indică reducerea mișcării sau economisirea datelor.
 
+## Fotografie MC
+
+Imaginea `public/assets/images/mc-event.jpg` îl prezintă pe MC-ul programului cultural de la Festivalul Ambasadelor din Praga. Fotografie de [Mojmir Churavy](https://commons.wikimedia.org/wiki/User:Mojmir_Churavy), disponibilă sub [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/); [pagina fișierului](https://commons.wikimedia.org/wiki/File:Festival_of_Embassies_Prague_2022_C.jpg).
+
 ## Configurare locală
 
 1. Creează baza de date MySQL `evenimente` cu collation `utf8mb4_unicode_ci`.
@@ -47,9 +51,9 @@ Nu trimite și nu salva credențiale reale în repository. Pentru hosting, folos
 - `/admin/login/` — autentificare administrator
 - `/admin/` — pagini și solicitări recente
 - `/admin/pages/{slug}/` — editarea conținutului unei pagini
-- `/admin/settings/social-links/` — administrarea linkurilor Facebook, Instagram, X/Twitter, Pinterest și LinkedIn
+- `/admin/settings/social-links/` — administrarea linkurilor Facebook și Instagram
 
-Linkurile sociale sunt salvate în tabelul `social_links` și afișate ca iconițe verticale în partea dreaptă jos a bannerului principal, doar când au fost configurate. Rulează `php bin\migrate.php` pentru a crea tabelul pe o instalare existentă.
+Linkurile sociale sunt salvate în tabelul `social_links` și afișate ca iconițe în bannerul principal și footer doar când au fost configurate. Sunt disponibile Facebook și Instagram. Rulează `php bin\migrate.php` pentru a crea tabelul pe o instalare existentă.
 
 Solicitările trimise prin formularul de contact sunt stocate în `contact_requests` și apar în zona administrată. Numerele de telefon se configurează în `config/site.php`.
 
