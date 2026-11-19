@@ -1,3 +1,25 @@
+<?php
+$pageTitle = 'Show nunți Craiova | Momente artistice | ShowTime Craiova';
+$pageDescription = 'Show nunți Craiova și momente artistice de breakdance pentru nuntă, botez, majorat și evenimente corporate. Cere o ofertă personalizată pentru evenimentul tău.';
+$canonical = trim((string) $site['brand']['url']) !== ''
+    ? rtrim((string) $site['brand']['url'], '/') . '/show-uri-dans-nunti-evenimente-craiova/'
+    : '';
+$structuredData = [
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'name' => 'Show-uri de breakdance și momente artistice în Craiova',
+    'description' => $pageDescription,
+    'serviceType' => 'Show de breakdance pentru nunți și evenimente',
+    'areaServed' => [
+        '@type' => 'City',
+        'name' => $site['location']['city'],
+    ],
+    'provider' => [
+        '@type' => 'Organization',
+        'name' => $site['brand']['name'],
+    ],
+];
+?>
 <section class="breakdance-page">
     <div class="breakdance-hero">
         <img

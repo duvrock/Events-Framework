@@ -1,8 +1,9 @@
 <?php
-$fields = $data['fields'];
-$error = $data['error'];
-$submitted = $data['submitted'];
-$csrfToken = $data['csrfToken'];
+$pageTitle = 'Contact și ofertă pentru eveniment | ShowTime Craiova';
+$pageDescription = 'Contactează ShowTime Craiova pentru show-uri de dans, DJ, MC și petreceri pentru copii. Sună la +40 761 657 045 sau +40 731 251 289.';
+$canonical = trim((string) $site['brand']['url']) !== ''
+    ? rtrim((string) $site['brand']['url'], '/') . '/contact/'
+    : '';
 $phones = [
     $site['contact']['phone'],
     $site['contact']['phone_secondary'] ?? '',
@@ -20,7 +21,7 @@ $phones = [
         <div class="container contact-hero-inner">
             <p class="eyebrow"><span class="eyebrow-line"></span> Entertainment pentru evenimente în Craiova</p>
             <h1>Hai să vorbim despre evenimentul tău</h1>
-            <p>Sună-ne direct sau trimite-ne câteva detalii și revenim pentru a discuta opțiunile potrivite.</p>
+            <p>Sună-ne direct pentru a discuta opțiunile potrivite evenimentului tău.</p>
         </div>
     </div>
 
@@ -46,71 +47,14 @@ $phones = [
                 </div>
                 <p class="contact-service-area">📍 Servicii în <?= e($site['location']['service_area']) ?></p>
             </aside>
-
             <div class="contact-form-panel">
                 <h2>Solicită o ofertă</h2>
-                <p class="contact-form-intro">Câmpurile marcate cu * sunt obligatorii.</p>
-
-                <?php if ($error !== ''): ?>
-                    <p class="form-message form-error" role="alert"><?= e($error) ?></p>
-                <?php elseif ($submitted): ?>
-                    <p class="form-message form-success" role="status">Mulțumim! Solicitarea ta a fost trimisă. Te vom contacta pentru a discuta detaliile evenimentului.</p>
-                <?php endif; ?>
-
-                <form class="contact-form" method="post" action="/contact/">
-                    <input type="hidden" name="csrf_token" value="<?= e($csrfToken) ?>">
-                    <div class="contact-honeypot" aria-hidden="true">
-                        <label for="contact-website">Nu completa acest câmp</label>
-                        <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off">
-                    </div>
-
-                    <div class="contact-form-grid">
-                        <div class="contact-field">
-                            <label for="contact-name">Nume *</label>
-                            <input id="contact-name" name="name" type="text" maxlength="120" autocomplete="name" required value="<?= e($fields['name']) ?>">
-                        </div>
-                        <div class="contact-field">
-                            <label for="contact-phone">Telefon *</label>
-                            <input id="contact-phone" name="phone" type="tel" maxlength="40" autocomplete="tel" required value="<?= e($fields['phone']) ?>">
-                        </div>
-                        <div class="contact-field">
-                            <label for="contact-email">Email</label>
-                            <input id="contact-email" name="email" type="email" maxlength="190" autocomplete="email" value="<?= e($fields['email']) ?>">
-                        </div>
-                        <div class="contact-field">
-                            <label for="contact-event-type">Tip eveniment *</label>
-                            <select id="contact-event-type" name="event_type" required>
-                                <option value="">Alege tipul evenimentului</option>
-                                <?php foreach (['Nuntă', 'Botez', 'Majorat', 'Eveniment corporate', 'Petrecere privată', 'Petrecere pentru copii', 'Alt eveniment'] as $eventType): ?>
-                                    <option value="<?= e($eventType) ?>" <?= $fields['event_type'] === $eventType ? 'selected' : '' ?>><?= e($eventType) ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="contact-field">
-                            <label for="contact-service">Serviciu dorit *</label>
-                            <select id="contact-service" name="desired_service" required>
-                                <option value="">Alege un serviciu</option>
-                                <?php foreach (['Show de dans / breakdance', 'DJ', 'MC', 'Petrecere pentru copii', 'Mai multe servicii', 'Alt serviciu'] as $service): ?>
-                                    <option value="<?= e($service) ?>" <?= $fields['desired_service'] === $service ? 'selected' : '' ?>><?= e($service) ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="contact-field">
-                            <label for="contact-date">Data evenimentului</label>
-                            <input id="contact-date" name="event_date" type="date" value="<?= e($fields['event_date']) ?>">
-                        </div>
-                        <div class="contact-field contact-field--full">
-                            <label for="contact-locality">Localitate *</label>
-                            <input id="contact-locality" name="locality" type="text" maxlength="120" autocomplete="address-level2" required value="<?= e($fields['locality']) ?>">
-                        </div>
-                        <div class="contact-field contact-field--full">
-                            <label for="contact-message">Detalii despre eveniment *</label>
-                            <textarea id="contact-message" name="message" rows="5" maxlength="5000" required><?= e($fields['message']) ?></textarea>
-                        </div>
-                    </div>
-
-                    <button class="button" type="submit">Trimite solicitarea <span aria-hidden="true">↗</span></button>
-                </form>
+                <p class="contact-form-intro">Alege numărul de telefon și sună-ne pentru a discuta detaliile evenimentului.</p>
+                <?php foreach ($phones as $phone): ?>
+                    <?php if ($phone !== ''): ?>
+                        <p><a class="button" href="tel:<?= e(preg_replace('/[^0-9+]/', '', $phone)) ?>">Sună la <?= e($phone) ?></a></p>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

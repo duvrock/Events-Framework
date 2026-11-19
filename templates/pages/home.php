@@ -1,9 +1,16 @@
+<?php
+$pageTitle = 'Show-uri pentru evenimente și DJ în Craiova | ShowTime Craiova';
+$pageDescription = 'Show-uri pentru evenimente și DJ în Craiova: momente de dans, DJ și entertainment pentru nunți, botezuri și petreceri. Contactează ShowTime Craiova.';
+$canonical = trim((string) $site['brand']['url']) !== ''
+    ? rtrim((string) $site['brand']['url'], '/') . '/'
+    : '';
+?>
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-copy">
             <p class="eyebrow"><span class="eyebrow-line"></span> Evenimente cu energie, în <?= e($site['location']['city']) ?></p>
-            <h1><?= e($data['page']['h1']) ?></h1>
-            <p class="hero-intro"><?= e($data['page']['intro']) ?></p>
+            <h1>Show-uri și DJ pentru evenimente în Craiova</h1>
+            <p class="hero-intro">Organizezi o nuntă, un botez sau o petrecere? Alege show-uri de dans și DJ în Craiova pentru momente memorabile și o atmosferă potrivită evenimentului tău.</p>
             <div class="hero-actions">
                 <a class="button" href="/contact/">Solicită o ofertă <span aria-hidden="true">↗</span></a>
                 <?php if ($site['contact']['phone'] !== ''): ?>

@@ -19,16 +19,4 @@ spl_autoload_register(static function (string $class): void {
     }
 });
 
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    $isHttps = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';
-    session_set_cookie_params([
-        'httponly' => true,
-        'secure' => $isHttps,
-        'samesite' => 'Lax',
-        'path' => '/',
-    ]);
-    ini_set('session.use_strict_mode', '1');
-    session_start();
-}
-
 $site = require dirname(__DIR__) . '/config/site.php';
